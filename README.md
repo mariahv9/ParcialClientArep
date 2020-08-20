@@ -21,8 +21,13 @@ Abrir el siguiente para ver el despliegue:
 * [Java 8](https://www.java.com/es/about/whatis_java.jsp)
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
 * [Heroku](https://dashboard.heroku.com/) - Despliegue
-* [CircleCI]() - Pruebas
+* [CircleCI](https://circleci.com/) - Pruebas
 
+## CircleCI
+
+[![Circle](https://img.shields.io/website?logo=heroku&url=https%3A%2F%2Fcalculatorarep.herokuapp.com%2Finputdata)
+
+![CircleCI](https://img.shields.io/circleci/build/github/mariahv9/HerokuCalculatorAREP?token=fa8c51f3bedd926b133267148a5e3c22e1617f4a)
 
 ## Autor
 
