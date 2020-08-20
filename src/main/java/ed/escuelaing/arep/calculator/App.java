@@ -49,10 +49,10 @@ public class App {
     private static String resultsPage(Request req, Response res) {
         String dataFrame;
         LinkedList data;
-        double number;
+        Double number;
         double m = 0, s = 0;
 
-        while ((dataFrame = req.queryParams("input")) != null) {
+        if ((dataFrame = req.queryParams("data")) != null) {
             String[] list = dataFrame.split(" ");
             data = new LinkedList();
             for (String elemento: list) {
@@ -62,9 +62,9 @@ public class App {
             m = getMean(data);
             s = getStd(data);
         }
+
         return "Media: " + m + " Desviación Estándar: "+ s;
     }
-
 
     public static double getMean (LinkedList data){
         Calculator results = new Calculator();
