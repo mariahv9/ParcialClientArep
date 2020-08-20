@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"ed.escuelaing.arep"},{"l":"ed.escuelaing.arep.calculator"},{"l":"ed.escuelaing.arep.resources"}]
