@@ -1,13 +1,13 @@
-# TALLER INTRODUCCIÓN A HEROKU
+# INTRODUCTION TO COMPUTER SYSTEM DESIGN
 
-Despliegue aplicación web a heroku.
+Despliegue aplicación calculadora web a heroku.
 
 ## Clonacion del repositorio 
 
 Para clonar el proyecto usar el siguiente comando:
 
 ```
-git clone https://github.com/mariahv9/HerokuAREP
+git clone https://github.com/mariahv9/HerokuCalculatorAREP
 ```
 
 ### Ejecucion App
@@ -21,6 +21,7 @@ Abrir el siguiente para ver el despliegue:
 * [Java 8](https://www.java.com/es/about/whatis_java.jsp)
 * [Maven](https://maven.apache.org/) - Manejador de dependencias
 * [Heroku](https://dashboard.heroku.com/) - Despliegue
+* [CircleCI]() - Pruebas
 
 
 ## Autor
