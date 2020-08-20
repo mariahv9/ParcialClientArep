@@ -14,7 +14,7 @@ git clone https://github.com/mariahv9/HerokuCalculatorAREP
 
 Abrir el siguiente para ver el despliegue:
 
-* [HerokuApp](http://herokuarep.herokuapp.com/hello)
+* [HerokuApp](https://calculatorarep.herokuapp.com/inputdata)
 
 ## Construido con 
 
@@ -25,9 +25,8 @@ Abrir el siguiente para ver el despliegue:
 
 ## CircleCI
 
-[![Circle](https://img.shields.io/website?logo=heroku&url=https%3A%2F%2Fcalculatorarep.herokuapp.com%2Finputdata)
+[![CircleCI](https://circleci.com/gh/mariahv9/HerokuCalculatorAREP.svg?style=svg&circle-token=fa8c51f3bedd926b133267148a5e3c22e1617f4a)](https://app.circleci.com/pipelines/github/mariahv9/HerokuCalculatorAREPhttps://app.circleci.com/pipelines/github/mariahv9/HerokuCalculatorAREP)
 
-![CircleCI](https://img.shields.io/circleci/build/github/mariahv9/HerokuCalculatorAREP?token=fa8c51f3bedd926b133267148a5e3c22e1617f4a)
 
 ## Autor
 
