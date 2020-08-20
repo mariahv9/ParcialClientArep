@@ -7,6 +7,7 @@ import static spark.Spark.*;
 
 /**
  * Class that deploy on web
+ * @author Maria Hernandez
  */
 public class App {
     public static void main(String[] args) {
@@ -63,19 +64,34 @@ public class App {
             s = getStd(data);
         }
 
-        return "Media: " + m + " Desviación Estándar: "+ s;
+        return "Los datos que fueron evaluados son: [" + req.queryParams("data") +
+                "] Y el resultado de la Media es: " + m + " y de la Desviación Estándar es: "+ s;
     }
 
+    /**
+     * Method that returns Mean of a data list
+     * @param data
+     * @return
+     */
     public static double getMean (LinkedList data){
         Calculator results = new Calculator();
         return results.mean(data);
     }
 
+    /**
+     * Method that returns Standard Deviation of a data list
+     * @param data
+     * @return
+     */
     public static double getStd (LinkedList data){
         Calculator results = new Calculator();
         return results.standardDev(data);
     }
 
+    /**
+     * Method that returns port service
+     * @return
+     */
     public static int getPort() {
         if (System.getenv("PORT") != null)
         {
