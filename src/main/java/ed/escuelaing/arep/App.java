@@ -10,7 +10,10 @@ public class App {
     public static void main (String[] args) {
         port (getPort());
         get("/inputdata", (req, res) -> inputDataPage(req, res));
-        get("/results", (req, res) -> resultsPage(req, res));
+        get("/results", (req, res) -> {
+            res.type("application/json");
+            return resultsPage(req, res);
+        });
     }
 
     public static String inputDataPage (Request req, Response res) {
