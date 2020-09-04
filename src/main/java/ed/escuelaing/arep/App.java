@@ -1,9 +1,11 @@
 package ed.escuelaing.arep;
 
-import ed.escuelaing.arep.calculator.Calculate;
-import org.primefaces.shaded.json.JSONObject;
 import spark.Request;
 import spark.Response;
+
+import java.io.*;
+import java.net.*;
+
 import static spark.Spark.*;
 
 public class App {
@@ -12,8 +14,30 @@ public class App {
         get("/inputdata", (req, res) -> inputDataPage(req, res));
         get("/results", (req, res) -> {
             res.type("application/json");
-            return resultsPage(req, res);
+            String function = req.queryParams("data");
+            String value = req.queryParams("value");
+            return readURL("https://desolate-waters-64492.herokuapp.com/results?data="+function+"&value="+value);
         });
+    }
+
+    public static String readURL(String sitetoread) {
+        String resData = null;
+        try {
+            URL siteURL = new URL(sitetoread);
+            URLConnection urlConnection = siteURL.openConnection();
+            System.out.println("-------message-body------");
+            BufferedReader reader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
+
+            String inputLine = null;
+            resData = "";
+            while ((inputLine = reader.readLine()) != null) {
+                resData += inputLine;
+            }
+        } catch (IOException x) {
+            resData = "";
+            System.err.println(x);
+        }
+        return resData;
     }
 
     public static String inputDataPage (Request req, Response res) {
@@ -28,7 +52,7 @@ public class App {
                 + "  Ingrese la funcion:"
                 + "  <input type=\"text\" name=\"data\" size= 50 value=\"cos\n\">"
                 + "  <br><br>"
-                + "  Ingrese la funcion:"
+                + "  Ingrese el valor:"
                 + "  <input type=\"text\" name=\"value\" size= 50 value=\"45\n\">"
                 + "  <br><br>"
                 + "  <input type=\"submit\" value=\"Evaluar\">"
@@ -36,43 +60,6 @@ public class App {
                 + "</body>"
                 + "</html>";
         return pageContent;
-    }
-
-    /**
-     * Method that reads the file with the data input
-     * @param req
-     * @param res
-     * @return
-     */
-    private static JSONObject resultsPage(Request req, Response res) {
-        String function = req.queryParams("data");
-        String value = req.queryParams("value");
-        double tr = getFunction(function, value);
-        JSONObject ans = new JSONObject();
-        ans.put("Funcion", function);
-        ans.put("Valor", value);
-        ans.put("Respuesta", tr);
-        return ans;
-    }
-
-    /**
-     * Method that returns the values
-     * @param function, value
-     * @return
-     */
-    public static double getFunction (String function, String value){
-        Calculate cal = new Calculate();
-        double ans = 0;
-        if (function.equals("sin")){
-            ans = cal.sin(Double.parseDouble(value));
-        }
-        else if (function.equals("cos")){
-            ans = cal.cos(Double.parseDouble(value));
-        }
-        else if (function.equals("tan")){
-            ans = cal.tan(Double.parseDouble(value));
-        }
-        return ans;
     }
 
     /**
