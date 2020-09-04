@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"ed.escuelaing.arep.calculator","l":"App"},{"p":"ed.escuelaing.arep","l":"AppTest"},{"p":"ed.escuelaing.arep.calculator","l":"Calculator"},{"p":"ed.escuelaing.arep.resources","l":"LinkedList"},{"p":"ed.escuelaing.arep.resources","l":"Node"}]

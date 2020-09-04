@@ -1,20 +1,25 @@
-# INTRODUCTION TO COMPUTER SYSTEM DESIGN
+# Parcial Primer Corte
 
-Despliegue aplicación calculadora web a heroku.
 
 ## Clonacion del repositorio 
 
 Para clonar el proyecto usar el siguiente comando:
 
 ```
-git clone https://github.com/mariahv9/HerokuCalculatorAREP
+git clone https://https://github.com/mariahv9/Parcial1AREP
 ```
 
 ### Ejecucion App
 
+```
+cd Parcial1AREP
+mvn package 
+java -cp
+```
+
 Abrir el siguiente para ver el despliegue:
 
-* [HerokuApp](https://calculatorarep.herokuapp.com/inputdata)
+* [HerokuApp]()
 
 ## Construido con 
 
@@ -25,7 +30,7 @@ Abrir el siguiente para ver el despliegue:
 
 ## CircleCI
 
-[![CircleCI](https://circleci.com/gh/mariahv9/HerokuCalculatorAREP.svg?style=svg&circle-token=fa8c51f3bedd926b133267148a5e3c22e1617f4a)](https://app.circleci.com/pipelines/github/mariahv9/HerokuCalculatorAREPhttps://app.circleci.com/pipelines/github/mariahv9/HerokuCalculatorAREP)
+[![CircleCI](https://circleci.com/gh/mariahv9/Parcial1AREP.svg?style=svg&circle-token=fa8c51f3bedd926b133267148a5e3c22e1617f4a)]()
 
 
 ## Autor
