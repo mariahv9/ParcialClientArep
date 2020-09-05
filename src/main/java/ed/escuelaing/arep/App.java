@@ -2,13 +2,19 @@ package ed.escuelaing.arep;
 
 import spark.Request;
 import spark.Response;
-
 import java.io.*;
 import java.net.*;
-
 import static spark.Spark.*;
 
+/**
+ * Class That connects with app
+ * @author Maria Fernanda Hernandez Vargas
+ */
 public class App {
+    /**
+     * Method that does the connection and takes data
+     * @param args
+     */
     public static void main (String[] args) {
         port (getPort());
         get("/inputdata", (req, res) -> inputDataPage(req, res));
@@ -20,6 +26,11 @@ public class App {
         });
     }
 
+    /**
+     * Methos that reads url input
+     * @param sitetoread
+     * @return
+     */
     public static String readURL(String sitetoread) {
         String resData = null;
         try {
@@ -40,6 +51,12 @@ public class App {
         return resData;
     }
 
+    /**
+     * Method that takes user's data
+     * @param req
+     * @param res
+     * @return
+     */
     public static String inputDataPage (Request req, Response res) {
         String pageContent
                 = "<!DOCTYPE html>"
